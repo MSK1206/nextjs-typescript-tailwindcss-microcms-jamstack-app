@@ -9,7 +9,7 @@
 
 ## 主な機能
 
-- Next.js App Routerで使用でのSG
+- Next.jsによるServer ComponentsでのDataのfetch
 - TypeScriptによる型安全なコーディング
 - Tailwind CSSによる迅速なスタイリング
 - microCMSを活用したコンテンツ管理
