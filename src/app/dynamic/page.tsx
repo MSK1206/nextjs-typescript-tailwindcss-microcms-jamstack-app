@@ -4,7 +4,7 @@ import { getBlogList } from '@/app/_libs/microcms'
 // キャッシュを利用しない
 export const revalidate = 0
 
-export default async function Blog() {
+export default async function Page() {
   const { contents } = await getBlogList()
 
   // ページの生成された時間を取得
