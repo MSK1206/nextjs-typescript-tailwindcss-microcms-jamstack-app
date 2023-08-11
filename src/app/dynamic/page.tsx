@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import { getBlogList, Blog } from '@/app/_libs/microcms'
-import { BLOG_LIST_LIMIT } from '../_constants'
-import { formatDate } from '../_libs/dayjsDate'
+import { getBlogList } from '@/app/_libs/microcms'
 
 // キャッシュを利用しない
-export const revalidate = 300
+export const revalidate = 0
 
 export default async function StaticPage() {
   const { contents } = await getBlogList()
@@ -17,7 +15,7 @@ export default async function StaticPage() {
   }
 
   return (
-    <div className="flex items-center justify-center">
+    <div>
       <h1>{time}</h1>
       <ul>
         {contents.map((blogs) => {
