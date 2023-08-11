@@ -22,6 +22,8 @@ export type Categories = {
 } & MicroCMSContentId &
   MicroCMSDate
 
+export type Blogs = Blog & MicroCMSContentId & MicroCMSDate
+
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error('MICROCMS_SERVICE_DOMAIN is required')
 }
@@ -52,7 +54,7 @@ export const getBlogList = async (queries?: MicroCMSQueries) => {
 }
 
 // ブログの詳細を取得
-export const getDetail = async (
+export const getBlogDetail = async (
   contentId: string,
   queries?: MicroCMSQueries
 ) => {
