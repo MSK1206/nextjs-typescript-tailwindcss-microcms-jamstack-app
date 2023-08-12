@@ -4,7 +4,7 @@ export default function Menu() {
   return (
     <div>
       <nav>
-        <Link href={'/dynamic'}>Blog</Link>
+        <Link href={'/blog'}>Blog</Link>
       </nav>
     </div>
   )
