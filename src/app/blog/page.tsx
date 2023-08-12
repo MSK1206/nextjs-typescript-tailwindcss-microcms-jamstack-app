@@ -44,12 +44,11 @@ export default async function Page() {
                 )}
                 <h1>{blogs.title}</h1>
                 {blogs.category.map((category) => (
-                  <li key={category.id}>
-                    <Link href={`/category/${category.id}`}>
-                      <span className="inline-flex items-center justify-between">
-                        {category.name}
-                      </span>
-                    </Link>
+                  <li
+                    className="inline-flex items-center justify-between"
+                    key={category.id}
+                  >
+                    <span>{category.name}</span>
                   </li>
                 ))}
                 <PublishedDate date={utcDate} />
