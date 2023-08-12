@@ -29,7 +29,7 @@ export default async function Page() {
                   <Image
                     src={blogs.thumbnail?.url}
                     alt={blogs.title}
-                    className=""
+                    className="w-80 h-auto"
                     width={blogs.thumbnail?.width}
                     height={blogs.thumbnail?.height}
                   />
