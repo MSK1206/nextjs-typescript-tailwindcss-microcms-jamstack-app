@@ -13,7 +13,7 @@ export type Blog = {
   title: string
   content: string
   thumbnail?: MicroCMSImage
-  category: Categories
+  category: Categories[]
 } & MicroCMSDate
 
 // カテゴリーの型定義
