@@ -1,21 +1,18 @@
 import Link from 'next/link'
 import { getBlogList } from '@/app/_libs/microcms'
 import PublishedDate from '../_components/Date'
+import Image from 'next/image'
 
-// キャッシュを利用しない
-export const revalidate = 0
+// キャッシュを利用しない => SSRと同等
+// キャッシュを〇秒間利用する => ISR同等
+
+export const revalidate = 180
 
 export default async function Page() {
   const { contents } = await getBlogList()
 
   // ページの生成された時間を取得
   const utcDate = new Date().toUTCString()
-  {
-    /*const publishedDate = `${dayjs
-    .utc(utcDate)
-    .tz('Asia/Tokyo')
-  .format('YYYY年MM月DD日')}`*/
-  }
 
   if (!contents || contents.length === 0) {
     return <h1>No contents</h1>
@@ -23,13 +20,40 @@ export default async function Page() {
 
   return (
     <div className="flex items-center justify-center p-4">
-      {/* <h2>{publishedDate}</h2> */}
-      <PublishedDate date={utcDate} />
       <ul>
         {contents.map((blogs) => {
           return (
             <li key={blogs.id}>
-              <Link href={`/blog/${blogs.id}`}>{blogs.title}</Link>
+              <Link href={`/blog/${blogs.id}`}>
+                {blogs.thumbnail ? (
+                  <Image
+                    src={blogs.thumbnail?.url}
+                    alt={blogs.title}
+                    className=""
+                    width={blogs.thumbnail?.width}
+                    height={blogs.thumbnail?.height}
+                  />
+                ) : (
+                  <Image
+                    src={'/no-img.png'}
+                    alt={'No-Image'}
+                    className=""
+                    width={1200}
+                    height={630}
+                  />
+                )}
+                <h1>{blogs.title}</h1>
+                {blogs.category.map((category) => (
+                  <li key={category.id}>
+                    <Link href={`/category/${category.id}`}>
+                      <span className="inline-flex items-center justify-between">
+                        {category.name}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+                <PublishedDate date={utcDate} />
+              </Link>
             </li>
           )
         })}
