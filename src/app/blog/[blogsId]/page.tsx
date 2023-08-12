@@ -30,8 +30,9 @@ export default async function StaticDetailPage({
   const blogs = await getBlogDetail(blogsId)
 
   // ページの生成された時間を取得
-  const time = `${dayjs
-    .utc(blogs.publishedAt)
+  const utcDate = new Date().toUTCString()
+  const publishedDate = `${dayjs
+    .utc(utcDate)
     .tz('Asia/Tokyo')
     .format('YYYY年MM月DD日')}`
 
@@ -42,7 +43,7 @@ export default async function StaticDetailPage({
   return (
     <div>
       <h1>{blogs.title}</h1>
-      <h2>{time}</h2>
+      <h2>{publishedDate}</h2>
       <div>{parse(blogs.content)}</div>
     </div>
   )
