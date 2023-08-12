@@ -1,14 +1,9 @@
 import { notFound } from 'next/navigation'
 import parse from 'html-react-parser'
 import { getBlogDetail, getBlogList } from '@/app/_libs/microcms'
-import dayjs from 'dayjs'
-import utc from 'dayjs/plugin/utc'
-import timezone from 'dayjs/plugin/timezone'
-dayjs.extend(utc)
-dayjs.extend(timezone)
+import PublishedDate from '@/app/_components/Date'
 
-// キャッシュを利用しない
-export const revalidate = 0
+export const revalidate = 180
 
 export async function generateStaticParams() {
   const { contents } = await getBlogList()
@@ -31,10 +26,6 @@ export default async function StaticDetailPage({
 
   // ページの生成された時間を取得
   const utcDate = new Date().toUTCString()
-  const publishedDate = `${dayjs
-    .utc(utcDate)
-    .tz('Asia/Tokyo')
-    .format('YYYY年MM月DD日')}`
 
   if (!blogs) {
     notFound()
@@ -43,7 +34,7 @@ export default async function StaticDetailPage({
   return (
     <div>
       <h1>{blogs.title}</h1>
-      <h2>{publishedDate}</h2>
+      <PublishedDate date={utcDate} />
       <div>{parse(blogs.content)}</div>
     </div>
   )
