@@ -35,7 +35,7 @@ export default async function Page() {
                   />
                 ) : (
                   <Image
-                    src={'/no-img.png'}
+                    src={'/no-img.jpg'}
                     alt={'No-Image'}
                     className=""
                     width={1200}
