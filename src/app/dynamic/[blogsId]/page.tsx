@@ -34,7 +34,7 @@ export default async function StaticDetailPage({
   return (
     <div>
       <h1>{blogs.title}</h1>
-      <h2>{time}</h2>
+      <h2>{blogs.publishedAt}</h2>
       <div>{parse(blogs.content)}</div>
     </div>
   )
