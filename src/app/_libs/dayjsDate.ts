@@ -6,7 +6,5 @@ dayjs.extend(timezone)
 
 // Publish DateをDayjsで変換　例：2023/08/01
 export const formatDate = (date: string) => {
-  const utcDate = new Date(date)
-  const jstDate = dayjs.tz(utcDate, 'Asia/Tokyo')
-  return dayjs(jstDate, 'yyyy/MM/dd')
+  return dayjs(date).tz('Asia/Tokyo').format('YYYY年MM月DD日')
 }
