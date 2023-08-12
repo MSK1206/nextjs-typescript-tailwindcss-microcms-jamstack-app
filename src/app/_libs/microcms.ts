@@ -11,13 +11,21 @@ import { notFound } from 'next/navigation'
 export type Blog = {
   id: string
   title: string
+  description: string
   content: string
   thumbnail?: MicroCMSImage
   category: Categories[]
+  infotag: InfoTag
 } & MicroCMSDate
 
 // カテゴリーの型定義
 export type Categories = {
+  name: string
+} & MicroCMSContentId &
+  MicroCMSDate
+
+// インフォメーションタグの定義
+export type InfoTag = {
   name: string
 } & MicroCMSContentId &
   MicroCMSDate
