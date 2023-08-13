@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { getBlogDetail } from '@/app/_libs/microcms'
 import Article from '@/app/_components/Article'
+import { MetaTitleTemplate as TitleTemplate } from '@/app/_components/MetaTitles'
 
 type Props = {
   params: {
@@ -10,6 +11,10 @@ type Props = {
     dk: string
   }
 }
+
+// revalidate
+// キャッシュを利用しない => SSRと同等
+// キャッシュを〇秒間利用する => ISR同等
 
 export const revalidate = 60
 
@@ -22,8 +27,9 @@ export async function generateMetadata({
   })
 
   return {
-    title: data.title,
+    title: `${data.title} | ${TitleTemplate}`,
     description: data.description,
+    // Open Graph Protocolでシェア時にサムネイル付きカード表示
     openGraph: {
       title: data.title,
       description: data.description,
