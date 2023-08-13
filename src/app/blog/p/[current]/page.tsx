@@ -9,6 +9,7 @@ type Props = {
   }
 }
 
+// revalidate
 // キャッシュを利用しない => SSRと同等
 // キャッシュを〇秒間利用する => ISR同等
 
