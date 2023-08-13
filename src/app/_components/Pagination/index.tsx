@@ -20,9 +20,14 @@ export default function Pagination({
   return (
     <ul>
       {pages.map((p) => (
-        <li key={p}>
+        <li key={p} className="join">
           {current !== p ? (
-            <Link href={`${basePath}/p/${p}` + (q ? `?q=${q}` : '')}>{p}</Link>
+            <Link
+              href={`${basePath}/p/${p}` + (q ? `?q=${q}` : '')}
+              className="join-item"
+            >
+              {p}
+            </Link>
           ) : (
             <span>{p}</span>
           )}
