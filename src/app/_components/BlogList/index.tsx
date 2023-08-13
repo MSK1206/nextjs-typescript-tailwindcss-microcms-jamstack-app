@@ -6,7 +6,10 @@ type Props = {
 }
 
 export default function BlogList({ articles }: Props) {
-  if (!articles || articles.length === 0) {
+  if (!articles) {
+    return null
+  }
+  if (articles.length === 0) {
     return <p>記事がありません。</p>
   }
   return (
