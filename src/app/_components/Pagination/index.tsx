@@ -1,3 +1,4 @@
+import { BLOG_LIST_LIMIT } from '@/app/_constants'
 import Link from 'next/link'
 
 type Props = {
@@ -5,11 +6,23 @@ type Props = {
 }
 
 export default function Pagination({ totalCount }: Props) {
+  const range = (start: number, end: number) =>
+    [...Array(end - start + 1)].map((_, i) => start + i)
   return (
     <>
-      <ul>
-        <li></li>
-      </ul>
+      <div className="join">
+        <ul>
+          {range(1, Math.ceil(totalCount / BLOG_LIST_LIMIT)).map(
+            (number, index) => (
+              <li key={index}>
+                <Link href={`/blog/${number}`}>
+                  <button className="join-item btn">{number}</button>
+                </Link>
+              </li>
+            )
+          )}
+        </ul>
+      </div>
     </>
   )
 }
