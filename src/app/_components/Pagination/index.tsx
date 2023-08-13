@@ -15,7 +15,7 @@ export default function Pagination({ totalCount }: Props) {
           {range(1, Math.ceil(totalCount / BLOG_LIST_LIMIT)).map(
             (number, index) => (
               <li key={index}>
-                <Link href={`/blog/${number}`}>
+                <Link href={`/blog/page/${number}`}>
                   <button className="join-item btn">{number}</button>
                 </Link>
               </li>
