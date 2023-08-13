@@ -24,7 +24,11 @@ export default async function Page({ params }: Props) {
   return (
     <div className="flex items-center justify-center p-4">
       <BlogList articles={data.contents} />
-      <Pagination totalCount={data.totalCount} current={current} />
+      <Pagination
+        totalCount={data.totalCount}
+        current={current}
+        basePath="/blog"
+      />
     </div>
   )
 }
