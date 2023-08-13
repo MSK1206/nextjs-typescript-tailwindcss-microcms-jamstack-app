@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { getBlogList } from '@/app/_libs/microcms'
-import PublishedDate from '../_components/Date'
-import InfoTag from '@/app/_components/InfoTag'
+import { BLOG_LIST_LIMIT } from '../_constants'
 import BlogList from '../_components/BlogList'
 
 // キャッシュを利用しない => SSRと同等
@@ -11,7 +10,9 @@ import BlogList from '../_components/BlogList'
 export const revalidate = 180
 
 export default async function Page() {
-  const data = await getBlogList()
+  const data = await getBlogList({
+    limit: BLOG_LIST_LIMIT
+  })
 
   return (
     <div className="flex items-center justify-center p-4">
