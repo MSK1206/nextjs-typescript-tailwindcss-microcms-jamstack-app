@@ -15,7 +15,7 @@ export default async function Page() {
   })
 
   return (
-    <div className="flex items-center justify-center p-4 bg-gray-300">
+    <div className="flex items-center justify-center p-4">
       <BlogList articles={data.contents} />
     </div>
   )
