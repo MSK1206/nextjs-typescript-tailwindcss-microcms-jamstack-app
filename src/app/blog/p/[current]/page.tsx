@@ -1,5 +1,5 @@
 import { getBlogList } from '@/app/_libs/microcms'
-import { BLOG_LIST_LIMIT } from '../_constants'
+import { BLOG_LIST_LIMIT } from '@/app/_constants'
 import BlogList from '@/app/_components/BlogList'
 import Pagination from '@/app/_components/Pagination'
 
@@ -15,14 +15,16 @@ type Props = {
 export const revalidate = 60
 
 export default async function Page({ params }: Props) {
+  const current = parseInt(params.current as string, 10)
   const data = await getBlogList({
-    limit: BLOG_LIST_LIMIT
+    limit: BLOG_LIST_LIMIT,
+    offset: BLOG_LIST_LIMIT * (current - 1)
   })
 
   return (
     <div className="flex items-center justify-center p-4">
       <BlogList articles={data.contents} />
-      <Pagination totalCount={data.totalCount} />
+      <Pagination totalCount={data.totalCount} current={current} />
     </div>
   )
 }
