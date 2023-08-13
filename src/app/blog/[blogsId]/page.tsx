@@ -1,7 +1,10 @@
-import { notFound } from 'next/navigation'
-import parse from 'html-react-parser'
 import { getBlogDetail, getBlogList } from '@/app/_libs/microcms'
+import parse from 'html-react-parser'
 import PublishedDate from '@/app/_components/Date'
+import { notFound } from 'next/navigation'
+
+// キャッシュを利用しない => SSRと同等
+// キャッシュを〇秒間利用する => ISR同等
 
 export const revalidate = 180
 
