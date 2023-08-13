@@ -1,11 +1,10 @@
 .conteiner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   background-color: #fff;
-  margin: auto;
+  width: 840px;
+  margin: -40px auto 0;
   padding: 80px;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 
 @media (max-width: 920px) {
