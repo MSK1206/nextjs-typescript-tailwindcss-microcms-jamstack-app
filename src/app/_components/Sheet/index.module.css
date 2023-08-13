@@ -1,0 +1,21 @@
+.conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 80px;
+  border-radius: 20px;
+}
+
+@media (max-width: 920px) {
+  .container {
+    width: calc(100% - 80px);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 32px);
+    padding: 40px 16px;
+  }
+}
