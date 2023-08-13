@@ -4,7 +4,7 @@ import Article from '@/app/_components/Article'
 
 type Props = {
   params: {
-    blogId: string
+    slug: string
   }
   searchParams: {
     dk: string
@@ -17,7 +17,7 @@ export async function generateMetadata({
   params,
   searchParams
 }: Props): Promise<Metadata> {
-  const data = await getBlogDetail(params.blogId, {
+  const data = await getBlogDetail(params.slug, {
     draftKey: searchParams.dk
   })
 
@@ -33,7 +33,7 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params, searchParams }: Props) {
-  const data = await getBlogDetail(params.blogId, {
+  const data = await getBlogDetail(params.slug, {
     draftKey: searchParams.dk
   })
 
