@@ -1,10 +1,11 @@
-.conteiner {
-  position: relative;
-  background-color: #fff;
-  width: 840px;
-  margin: -40px auto 0;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffffff;
+  margin: auto;
   padding: 80px;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 @media (max-width: 920px) {
