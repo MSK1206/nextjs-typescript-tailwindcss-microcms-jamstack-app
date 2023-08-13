@@ -3,26 +3,31 @@ import Link from 'next/link'
 
 type Props = {
   totalCount: number
+  current?: number
+  basePath?: string
+  q?: string
 }
 
-export default function Pagination({ totalCount }: Props) {
-  const range = (start: number, end: number) =>
-    [...Array(end - start + 1)].map((_, i) => start + i)
+export default function Pagination({
+  totalCount,
+  current = 1,
+  basePath = '',
+  q
+}: Props) {
+  const pages = Array.from({
+    length: Math.ceil(totalCount / BLOG_LIST_LIMIT)
+  }).map((_, i) => i + 1)
   return (
-    <>
-      <div className="join">
-        <ul>
-          {range(1, Math.ceil(totalCount / BLOG_LIST_LIMIT)).map(
-            (number, index) => (
-              <li key={index}>
-                <Link href={`/blog/page/${number}`}>
-                  <button className="join-item btn">{number}</button>
-                </Link>
-              </li>
-            )
+    <ul>
+      {pages.map((p) => (
+        <li key={p}>
+          {current !== p ? (
+            <Link href={`${basePath}/p/${p}` + (q ? `?q=${q}` : '')}>{p}</Link>
+          ) : (
+            <span>{p}</span>
           )}
-        </ul>
-      </div>
-    </>
+        </li>
+      ))}
+    </ul>
   )
 }
