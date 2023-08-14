@@ -28,18 +28,27 @@ export default function Menu() {
         <ul className={styles.items}>
           {menuItems.map((item) => (
             <li className="menu-item" key={item.label}>
-              <Link href={item.link}>{item.label}</Link>
+              <Link href={item.link} onClick={toggleMenu}>
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
         <button
+          name="button"
+          type="button"
           className={cx(styles.button, styles.close)}
           onClick={toggleMenu}
         >
           <XMarkIcon className="w-8 h-8 text-white" />
         </button>
       </nav>
-      <button className={styles.button} onClick={toggleMenu}>
+      <button
+        name="button"
+        type="button"
+        className={styles.button}
+        onClick={toggleMenu}
+      >
         <Bars3BottomRightIcon className="w-8 h-8 text-black" />
       </button>
     </div>
