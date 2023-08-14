@@ -4,11 +4,15 @@ import Menu from '@/app/_components/Menu'
 
 export default function Header() {
   return (
-    <header className="flex sticky items-center justify-between w-full bg-slate-500">
+    <header className="navbar">
       <Link href={'/'}>
-        <Brand />
+        <div className="navbar-start">
+          <Brand />
+        </div>
       </Link>
-      <Menu />
+      <div className="navbar-end">
+        <Menu />
+      </div>
     </header>
   )
 }
