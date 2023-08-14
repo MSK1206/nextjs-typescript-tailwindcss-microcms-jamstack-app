@@ -5,6 +5,7 @@ import {
   MetaTitleTemplate as TitleTemplate
 } from '@/app/_components/MetaTitles'
 import Header from '@/app/_components/Header'
+import Footer from '@/app/_components/Footer'
 
 export const metadata: Metadata = {
   title: `${RootTitle} | ${TitleTemplate}`,
@@ -20,7 +21,8 @@ export default function RootLayout({
     <html lang="ja">
       <body>
         <Header />
-        <main className="bg-gray-300">{children}</main>
+        <main className="">{children}</main>
+        <Footer />
       </body>
     </html>
   )
