@@ -4,7 +4,7 @@ import Menu from '@/app/_components/Menu'
 
 export default function Header() {
   return (
-    <header className="navbar sticky">
+    <header className="navbar sticky pl-5 pr-5">
       <div className="navbar-start">
         <Link href={'/'}>
           <Brand />
