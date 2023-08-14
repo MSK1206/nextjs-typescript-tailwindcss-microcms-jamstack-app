@@ -10,7 +10,6 @@ export default function Header() {
           <Brand />
         </Link>
       </div>
-      <div className="navbar-center hidden"></div>
       <div className="navbar-end">
         <Menu />
       </div>
