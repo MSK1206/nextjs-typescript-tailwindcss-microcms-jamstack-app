@@ -1,7 +1,7 @@
 
 .items {
   display: flex;
-  color:rgb(228, 228, 228) ;
+  color: black;
   gap: 40px;
 }
 
@@ -24,12 +24,17 @@
     background-color: black;
     color: black;
     padding: 25px 20px;
+    .items {
+      color: whitesmoke;
+    }
   }
 
   .items {
     flex-direction: column;
+    padding-right: 70px;
     gap: 24px;
   }
+
 
   .button {
     display: flex;
