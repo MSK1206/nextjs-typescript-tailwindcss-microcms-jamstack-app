@@ -4,7 +4,7 @@ import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/outline'
 export default function Menu() {
   return (
     <>
-      <div className="dropdown-end">
+      <div className="dropdown-right">
         <label
           tabIndex={0}
           className="btn btn-ghost btn-circle swap swap-rotate"
