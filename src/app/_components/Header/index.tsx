@@ -5,11 +5,12 @@ import Menu from '@/app/_components/Menu'
 export default function Header() {
   return (
     <header className="navbar">
-      <Link href={'/'}>
-        <div className="navbar-start">
+      <div className="navbar-start">
+        <Link href={'/'}>
           <Brand />
-        </div>
-      </Link>
+        </Link>
+      </div>
+
       <div className="navbar-end">
         <Menu />
       </div>
