@@ -1,8 +1,7 @@
-
 .items {
   display: flex;
-  color: black;
   gap: 40px;
+  color: black;
 }
 
 .button {
@@ -24,17 +23,22 @@
     background-color: black;
     color: black;
     padding: 25px 20px;
-    .items {
-      color: whitesmoke;
-    }
   }
 
   .items {
     flex-direction: column;
-    padding-right: 70px;
+    padding: 0 80px 0 20px;
     gap: 24px;
+    color: white;
+  }
+  .items li:not(:first-child) {
+    margin-top: 5px;
   }
 
+  .items a {
+    font-size: 22px;
+    min-width: 100px;
+  }
 
   .button {
     display: flex;
