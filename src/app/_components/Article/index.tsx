@@ -10,7 +10,7 @@ type Props = {
 
 export default function Article({ data }: Props) {
   return (
-    <main>
+    <main id="top">
       <h1>{data.title}</h1>
       <p>{data.description}</p>
       <div>
@@ -21,6 +21,7 @@ export default function Article({ data }: Props) {
         <Image
           src={data.thumbnail?.url}
           alt=""
+          className=""
           width={data.thumbnail?.width}
           height={data.thumbnail?.height}
         />
