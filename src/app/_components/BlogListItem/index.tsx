@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Blogs } from '@/app/_libs/microcms'
 import PublishedDate from '@/app/_components/Date'
 import InfoTag from '@/app/_components/InfoTag'
+import styles from './index.module.css'
 
 type Props = {
   blogs: Blogs
@@ -18,7 +19,7 @@ export default function BlogListItem({ blogs }: Props) {
           <Image
             src={blogs.thumbnail?.url}
             alt={blogs.title}
-            className="w-[200px] h-auto rounded max-sm:hidden"
+            className={`w-[200px] h-auto rounded max-sm:hidden ${styles.image}`}
             width={blogs.thumbnail?.width}
             height={blogs.thumbnail?.height}
           />
