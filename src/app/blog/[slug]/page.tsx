@@ -31,8 +31,10 @@ export async function generateMetadata({
     description: data.description,
     // Open Graph Protocolでシェア時にサムネイル付きカード表示
     openGraph: {
+      type: 'article',
       title: data.title,
       description: data.description,
+      siteName: `${TitleTemplate}`,
       images: [data?.thumbnail?.url || '']
     }
   }
