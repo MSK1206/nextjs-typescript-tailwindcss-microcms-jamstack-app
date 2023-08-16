@@ -7,12 +7,12 @@ export default function Brand() {
       <Image
         src={'/mylogo.svg'}
         alt={`${BlandName} Logo`}
-        className="h-10 w-auto"
+        className="h-10 w-auto mr-2"
         width={40}
         height={40}
         priority
       />
-      <span className="">{BlandName}</span>
+      <span className="text-lg">{BlandName}</span>
     </div>
   )
 }
