@@ -18,7 +18,7 @@ export default function Pagination({
     length: Math.ceil(totalCount / BLOG_LIST_LIMIT)
   }).map((_, i) => i + 1)
   return (
-    <ul>
+    <ul className="flex items-center justify-center text-2xl">
       {pages.map((p) => (
         <li key={p}>
           {current !== p ? (
