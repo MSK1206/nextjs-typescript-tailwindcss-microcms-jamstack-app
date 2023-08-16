@@ -54,6 +54,7 @@ export default function Footer() {
             href={'#top'}
             className="inline-flex justify-center items-center"
           >
+            <span className="">©2023 All right reserved MSK1206</span>
             <Image
               src={'/mylogo.svg'}
               alt={`${BlandName} Logo`}
@@ -62,7 +63,6 @@ export default function Footer() {
               height={100}
               priority
             />
-            <span>Copyright © 2023 - All right reserved by MSK1206</span>
           </Link>
         </div>
       </footer>
