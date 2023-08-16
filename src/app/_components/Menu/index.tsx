@@ -19,16 +19,15 @@ const menuItems: MenuItem[] = [
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const toggleMenu = () => {
-    setIsOpen((prevOpen) => !prevOpen)
-  }
+  const openMenu = () => setIsOpen(true)
+  const closeMenu = () => setIsOpen(false)
   return (
     <div>
       <nav className={cx(styles.nav, isOpen && styles.open)}>
         <ul className={styles.items}>
           {menuItems.map((item) => (
             <li className="menu-item" key={item.label}>
-              <Link href={item.link} onClick={toggleMenu}>
+              <Link href={item.link} onClick={closeMenu}>
                 {item.label}
               </Link>
             </li>
@@ -38,7 +37,7 @@ export default function Menu() {
           name="button"
           type="button"
           className={cx(styles.button, styles.close)}
-          onClick={toggleMenu}
+          onClick={closeMenu}
         >
           <XMarkIcon className="w-8 h-8 text-white" />
         </button>
@@ -47,7 +46,7 @@ export default function Menu() {
         name="button"
         type="button"
         className={styles.button}
-        onClick={toggleMenu}
+        onClick={openMenu}
       >
         <Bars3BottomRightIcon className="w-8 h-8 text-black" />
       </button>
