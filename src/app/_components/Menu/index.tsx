@@ -48,7 +48,7 @@ export default function Menu() {
         className={styles.button}
         onClick={openMenu}
       >
-        <Bars3BottomRightIcon className="w-8 h-8 text-black" />
+        <Bars3BottomRightIcon className="w-8 h-8 text-white" />
       </button>
     </div>
   )
