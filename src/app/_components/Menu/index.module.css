@@ -1,7 +1,7 @@
 .items {
   display: flex;
   gap: 40px;
-  color: black;
+  color: white;
 }
 
 .button {
@@ -29,7 +29,6 @@
     flex-direction: column;
     padding: 0 80px 0 20px;
     gap: 24px;
-    color: white;
   }
   .items li:not(:first-child) {
     margin-top: 5px;
