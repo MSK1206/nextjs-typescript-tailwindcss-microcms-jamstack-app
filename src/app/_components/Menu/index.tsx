@@ -5,7 +5,7 @@ import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import cx from 'classnames'
 import styles from './index.module.css'
 
-interface MenuItem {
+type MenuItem = {
   label: string
   link: string
 }
