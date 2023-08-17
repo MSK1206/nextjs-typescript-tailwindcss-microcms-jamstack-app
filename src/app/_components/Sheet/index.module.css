@@ -1,10 +1,12 @@
 .container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ffffffff;
   margin: auto;
   padding: 80px;
+  margin-top: 230px;
   border-radius: 20px;
 }
 
