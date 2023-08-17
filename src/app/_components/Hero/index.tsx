@@ -2,8 +2,8 @@ import Image from 'next/image'
 import styles from './index.module.css'
 
 type Props = {
-  title: string
-  sub: string
+  title?: string
+  sub?: string
 }
 
 export default function Hero({ title, sub }: Props) {
