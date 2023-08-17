@@ -1,7 +1,7 @@
 // title | titleTemplate
 
 // titleTemplate
-export const MetaTitleTemplate = 'Re:birth'
+export const MetaTitleTemplate = 'MSK1206'
 
 // Root Page title
 export const MetaRootPageTitle = 'Home'
