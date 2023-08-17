@@ -10,9 +10,10 @@
   border-radius: 20px;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 844px) {
   .container {
     width: calc(100% - 80px);
+    margin-top: 180px;
   }
 }
 
@@ -20,5 +21,6 @@
   .container {
     width: calc(100% - 32px);
     padding: 40px 16px;
+    margin-top: 180px;
   }
 }
