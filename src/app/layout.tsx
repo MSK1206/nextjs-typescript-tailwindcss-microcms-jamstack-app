@@ -6,7 +6,6 @@ import {
 } from '@/app/_components/MetaTitles'
 import Header from '@/app/_components/Header'
 import Footer from '@/app/_components/Footer'
-import { useEffect } from 'react'
 
 export const metadata: Metadata = {
   title: `${RootTitle} | ${TitleTemplate}`,
@@ -18,17 +17,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  useEffect(() => {
-    const head = document.getElementsByTagName('head')[0] as HTMLElement
-    const scriptUrl = document.createElement('script')
-    scriptUrl.src = 'https://sdk.form.run/js/v2/embed.js'
-    head.appendChild(scriptUrl)
-    return () => {
-      // コンポーネントがアンマウントされる際にHeadからスクリプトのクリーンアップを行う
-      head.removeChild(scriptUrl)
-    }
-  }, [])
-
   return (
     <html lang="ja">
       <body>
