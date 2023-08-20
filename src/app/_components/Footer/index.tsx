@@ -1,16 +1,22 @@
-import Image from 'next/image'
-import { MetaTitleTemplate as BlandName } from '@/app/_components/MetaTitles'
 import Link from 'next/link'
 
 export default function Footer() {
   return (
     <>
-      <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+      <footer className="footer footer-center p-10 bg-black text-base-content">
         <div className="grid grid-flow-col gap-4">
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <Link href={'/'} className="link link-hover">
+            Home
+          </Link>
+          <Link href={'/blog'} className="link link-hover">
+            Blog
+          </Link>
+          <Link href={'/portfolio'} className="link link-hover">
+            Portfolio
+          </Link>
+          <Link href={'/contact'} className="link link-hover">
+            Contact
+          </Link>
         </div>
         <div>
           <div className="grid grid-flow-col gap-4">
@@ -54,15 +60,7 @@ export default function Footer() {
             href={'#top'}
             className="inline-flex justify-center items-center"
           >
-            <span className="">©2023 All right reserved MSK1206</span>
-            <Image
-              src={'/mylogo.svg'}
-              alt={`${BlandName} Logo`}
-              className="h-5 w-auto"
-              width={100}
-              height={100}
-              priority
-            />
+            <span className="text-white">©2023 All right reserved MSK1206</span>
           </Link>
         </div>
       </footer>
