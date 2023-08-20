@@ -10,4 +10,7 @@ export const MetaRootPageTitle = 'Home'
 export const MetaDynamicTitle = 'Blog'
 
 // Contact Page title
+export const MetaPortFolioTitle = 'PortFolio'
+
+// Contact Page title
 export const MetaContactTitle = 'Contact'
