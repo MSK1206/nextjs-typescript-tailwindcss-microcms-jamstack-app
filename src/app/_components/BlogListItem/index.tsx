@@ -14,7 +14,7 @@ export default function BlogListItem({ blogs }: Props) {
   const utcDate = new Date().toUTCString()
   return (
     <li className="border-solid border-b border-b-gray-300 last:border-b-[0]">
-      <Link href={`/blog/${blogs.id}`} className="">
+      <Link href={`/blog/${blogs.id}`} className={styles.bloglist}>
         {blogs?.thumbnail ? (
           <Image
             src={blogs.thumbnail?.url}
@@ -22,6 +22,7 @@ export default function BlogListItem({ blogs }: Props) {
             className={`w-[200px] h-auto rounded max-sm:hidden ${styles.image}`}
             width={blogs.thumbnail?.width}
             height={blogs.thumbnail?.height}
+            priority
           />
         ) : (
           <Image
@@ -30,9 +31,10 @@ export default function BlogListItem({ blogs }: Props) {
             className="w-[200px] h-auto rounded max-sm:hidden"
             width={1200}
             height={630}
+            priority
           />
         )}
-        <dl className="">
+        <dl className={styles.publishdesc}>
           <dt className="text-[1rem] font-bold">{blogs.title}</dt>
           <dd className="flex items-center gap-4">
             <InfoTag infotag={blogs.infotag} />
