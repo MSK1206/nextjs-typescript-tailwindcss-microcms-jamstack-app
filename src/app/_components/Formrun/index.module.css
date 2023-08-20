@@ -1,0 +1,20 @@
+.formrun_screen {
+  min-width: 85vw;
+}
+
+
+@media screen and (max-width: 415px) {
+  .formrun_screen {
+    min-width: 95vw;
+  }
+}
+@media screen and (max-width: 391px) {
+  .formrun_screen {
+    min-width: 95vw;
+  }
+}
+@media screen and (max-width: 376px) {
+  .formrun_screen {
+    min-width: 90vw;
+  }
+}
