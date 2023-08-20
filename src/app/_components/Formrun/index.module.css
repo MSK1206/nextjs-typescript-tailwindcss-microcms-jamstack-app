@@ -2,19 +2,38 @@
   min-width: 85vw;
 }
 
+@media (max-width: 896px) {
+  .formrun_screen {
+    min-width: 85vw;
+  }
+}
 
-@media screen and (max-width: 415px) {
+@media (max-width: 844px) {
   .formrun_screen {
-    min-width: 95vw;
+    min-width: 85vw;
   }
 }
-@media screen and (max-width: 391px) {
+
+@media (max-width: 640px) {
   .formrun_screen {
-    min-width: 95vw;
+    min-width: 85vw;
   }
 }
-@media screen and (max-width: 376px) {
+
+@media (max-width: 414px) {
   .formrun_screen {
     min-width: 90vw;
+  }
+}
+
+@media (max-width: 390px) {
+  .formrun_screen {
+    min-width: 90vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .formrun_screen {
+    min-width: 85vw;
   }
 }
