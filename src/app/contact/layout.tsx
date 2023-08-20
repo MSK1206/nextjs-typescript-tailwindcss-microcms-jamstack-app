@@ -4,7 +4,6 @@ import {
   MetaTitleTemplate as TitleTemplate,
   MetaContactTitle as Title
 } from '@/app/_components/MetaTitles'
-import Script from 'next/script'
 
 export const metadata = {
   title: `${Title} | ${TitleTemplate}`
