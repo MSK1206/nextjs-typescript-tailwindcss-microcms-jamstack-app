@@ -17,7 +17,12 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <>
-      <Script src="https://sdk.form.run/js/v2/embed.js" />
+      <Script
+        async
+        defer
+        type="text/javascript"
+        src="https://sdk.form.run/js/v2/embed.js"
+      />
       <Hero title={'Contact'} sub={'お問い合わせ'} />
       <Sheet>{children}</Sheet>
     </>
