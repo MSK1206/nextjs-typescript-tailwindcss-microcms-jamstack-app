@@ -29,7 +29,7 @@ const nextConfig = {
         ]
       },
       {
-        source: '/blog/p/:[current]*',
+        source: '/blog/p/:current*',
         headers: [
           {
             key: 'X-Content-Type-Options',
@@ -38,7 +38,7 @@ const nextConfig = {
         ]
       },
       {
-        source: '/blog/:[slug]*',
+        source: '/blog/:slug*',
         headers: [
           {
             key: 'X-Content-Type-Options',
