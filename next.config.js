@@ -5,10 +5,6 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.microcms-assets.io'
-      },
-      {
-        protocol: 'https',
-        hostname: 'sdk.form.run/js/v2/embed.js'
       }
     ]
   }
