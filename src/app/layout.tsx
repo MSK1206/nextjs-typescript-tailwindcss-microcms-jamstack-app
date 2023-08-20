@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="ja">
       <body>
         <Header />
-        <main className="">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
