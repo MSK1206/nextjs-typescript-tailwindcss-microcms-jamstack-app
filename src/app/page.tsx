@@ -9,7 +9,7 @@ export default function Home() {
           <p className=""></p>
         </div>
         <Image
-          className="absolute top-0 right-0 h-[600px] bg-cover flex items-center justify-center z-[-3] max-sm:h-[150px]"
+          className="absolute top-0 right-0 h-[300px] bg-cover flex items-center justify-center z-[-3]"
           src="/hero.jpg"
           alt=""
           width={3600}
