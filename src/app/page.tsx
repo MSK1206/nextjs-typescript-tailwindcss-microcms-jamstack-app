@@ -18,7 +18,7 @@ export default function Home() {
         />
       </section>
       <section className="mt-[170px] p-[200px] max-sm:p-[40px] max-sm:mt-[50px]">
-        <div className="">
+        <div className="mt-[40px]">
           <h2></h2>
           <p></p>
         </div>
