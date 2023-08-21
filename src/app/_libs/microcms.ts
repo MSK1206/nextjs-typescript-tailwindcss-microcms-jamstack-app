@@ -30,6 +30,16 @@ export type InfoTag = {
 } & MicroCMSContentId &
   MicroCMSDate
 
+// メタ情報の型定義
+export type Meta = {
+  title?: string
+  description?: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: MicroCMSImage
+  canonical?: string
+}
+
 export type Blogs = Blog & MicroCMSContentId & MicroCMSDate
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
@@ -98,4 +108,15 @@ export const getCategoryDetail = async (
     })
     .catch(notFound)
   return detailData
+}
+
+// メタ情報を取得
+export const getMeta = async (queries?: MicroCMSQueries) => {
+  const data = await client
+    .getObject<Meta>({
+      endpoint: 'meta',
+      queries
+    })
+    .catch(() => null)
+  return data
 }
