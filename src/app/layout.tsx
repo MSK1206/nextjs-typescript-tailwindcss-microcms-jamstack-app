@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: data.ogTitle,
       description: data.ogDescription,
       siteName: `${TitleTemplate}`,
-      images: [data?.ogImage?.url || '']
+      images: [`${data?.ogImage?.url}?txt=${data.ogDescription}&txt-size=40&txt-align=middle,center` || '']
     }
   }
 }
