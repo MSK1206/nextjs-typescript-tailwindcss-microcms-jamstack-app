@@ -15,8 +15,10 @@ export async function generateMetadata(): Promise<Metadata> {
     title: data.titleTemplate,
     description: data.description,
     openGraph: {
+      type: 'website',
       title: data.ogTitle,
       description: data.ogDescription,
+      siteName: `${TitleTemplate}`,
       images: [data.ogImage?.url || '']
     },
     alternates: {
