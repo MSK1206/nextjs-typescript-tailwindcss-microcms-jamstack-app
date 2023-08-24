@@ -32,13 +32,15 @@ export type InfoTag = {
 
 // メタ情報の型定義
 export type Meta = {
-  title?: string
+  titleTemplate?: string
   description?: string
   ogTitle?: string
   ogDescription?: string
   ogImage?: MicroCMSImage
   canonical?: string
 }
+
+export const ogImageinnerText = 'Next.js%20×%20microCMSで構築しました!'
 
 export type Blogs = Blog & MicroCMSContentId & MicroCMSDate
 
