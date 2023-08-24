@@ -25,7 +25,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [`${data?.ogImage?.url}?txt=${data.ogDescription}&txt-size=40&txt-align=middle,center` || '']
     },
     twitter: {
-    card: 'summary_large_image',
+    card: 'summary_large_image'
+    }  
   }
 }
 
