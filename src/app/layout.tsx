@@ -24,6 +24,9 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: `${TitleTemplate}`,
       images: [`${data?.ogImage?.url}?txt=${data.ogDescription}&txt-size=40&txt-align=middle,center` || '']
     },
+    alternates: {
+      canonical: data.canonical
+    },
     twitter: {
     card: 'summary_large_image'
     }  
