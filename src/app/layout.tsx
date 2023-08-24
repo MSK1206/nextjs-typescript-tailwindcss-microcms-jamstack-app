@@ -23,9 +23,6 @@ export async function generateMetadata(): Promise<Metadata> {
       description: data.ogDescription,
       siteName: `${TitleTemplate}`,
       images: [data?.ogImage?.url || '']
-    },
-    alternates: {
-      canonical: data.canonical
     }
   }
 }
