@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
       title: data.ogTitle,
       description: data.ogDescription,
-      siteName: `${TitleTemplate}`,
+      siteName: data.titleTemplate,
       images: [`${data?.ogImage?.url}?txt=${data.ogDescription}&txt-size=40&txt-align=middle,center` || '']
     },
     twitter: {
