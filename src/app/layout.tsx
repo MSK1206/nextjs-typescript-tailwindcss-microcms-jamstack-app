@@ -1,6 +1,7 @@
 import './globals.css'
 import Header from '@/app/_components/Header'
 import Footer from '@/app/_components/Footer'
+import { Metadata } from 'next';
 import { getMeta } from '@/app/_libs/microcms'
 import { MetaTitleTemplate as TitleTemplate } from '@/app/_components/MetaTitles'
 
