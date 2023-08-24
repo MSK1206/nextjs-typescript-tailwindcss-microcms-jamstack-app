@@ -40,7 +40,7 @@ export type Meta = {
   canonical?: string
 }
 
-export const ogImageinnerText = 'Next.js%20×%20microCMSで構築しました!'
+export const ogImageinnerText = 'Next.jsで構築しました!'
 
 export type Blogs = Blog & MicroCMSContentId & MicroCMSDate
 
