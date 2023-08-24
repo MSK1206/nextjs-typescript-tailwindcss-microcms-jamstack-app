@@ -15,6 +15,9 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
     title: data.titleTemplate,
     description: data.description,
+    alternates: {
+      canonical: data.canonical
+    },
     openGraph: {
       type: 'website',
       url: `${process.env.BASE_URL}`,
@@ -22,9 +25,6 @@ export async function generateMetadata(): Promise<Metadata> {
       description: data.ogDescription,
       siteName: `${TitleTemplate}`,
       images: [`${data?.ogImage?.url}?txt=${data.ogDescription}&txt-size=40&txt-align=middle,center` || '']
-    },
-    alternates: {
-      canonical: data.canonical
     },
     twitter: {
     card: 'summary_large_image'
