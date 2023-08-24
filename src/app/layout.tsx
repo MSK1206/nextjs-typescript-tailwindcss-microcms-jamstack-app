@@ -1,8 +1,8 @@
 import './globals.css'
-import type { Metadata } from 'next'
 import Header from '@/app/_components/Header'
 import Footer from '@/app/_components/Footer'
 import { getMeta } from '@/app/_libs/microcms'
+import { MetaTitleTemplate as TitleTemplate } from '@/app/_components/MetaTitles'
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getMeta()
