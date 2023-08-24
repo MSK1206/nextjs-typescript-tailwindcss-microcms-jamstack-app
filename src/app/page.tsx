@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     openGraph: {
       type: 'website',
-      url: `${process.env.BASE_URL}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
       title: data.ogTitle,
       description: data.ogDescription,
       siteName: `${TitleTemplate}`,
