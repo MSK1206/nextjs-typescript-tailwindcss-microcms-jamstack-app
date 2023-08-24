@@ -5,6 +5,8 @@ import { Metadata } from 'next';
 import { getMeta } from '@/app/_libs/microcms'
 import { MetaTitleTemplate as TitleTemplate } from '@/app/_components/MetaTitles'
 
+export const revalidate = 60;
+
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getMeta()
   if (!data) {
@@ -20,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: data.ogTitle,
       description: data.ogDescription,
       siteName: `${TitleTemplate}`,
-      images: [data.ogImage?.url || '']
+      images: [data?.ogImage?.url || '']
     },
     alternates: {
       canonical: data.canonical
