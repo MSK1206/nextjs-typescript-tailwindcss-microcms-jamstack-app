@@ -8,7 +8,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja" prefix=og: http://ogp.me/ns#>
+    <html lang="ja">
       <body>
         <Header />
         <main className="min-h-screen">{children}</main>
