@@ -17,19 +17,34 @@ const menuItems: MenuItem[] = [
   { label: 'Contact', link: '/contact' }
 ]
 
-export default function Menu() {
+export default function Menu({ current = 'Home' }) {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const openMenu = () => setIsOpen(true)
   const closeMenu = () => setIsOpen(false)
+
+  const [isActivePage, setActivePage] = useState(current)
+  const handleActiveClick = (current: string) => {
+    setActivePage(current)
+  }
   return (
     <div>
       <nav className={cx(styles.nav, isOpen && styles.open)}>
         <ul className={styles.items}>
           {menuItems.map((item) => (
-            <li className="menu-item" key={item.label}>
-              <Link href={item.link} onClick={closeMenu}>
-                {item.label}
-              </Link>
+            <li key={item.label}>
+              {isActivePage !== item.label ? (
+                <Link href={item.link} onClick={closeMenu}>
+                  <span onClick={() => handleActiveClick(item.label)}>
+                    {item.label}
+                  </span>
+                </Link>
+              ) : (
+                <span
+                  className={'text-[22px] text-gray-600 md:text-[16px] active'}
+                >
+                  {item.label}
+                </span>
+              )}
             </li>
           ))}
         </ul>
