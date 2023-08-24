@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
-    title: `${RootTitle} | ${TitleTemplate}`,
+    title: data.titleTemplate,
     description: data.description,
     openGraph: {
       title: data.ogTitle,
