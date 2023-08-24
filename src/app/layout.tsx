@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: data.ogTitle,
       description: data.ogDescription,
-      images: [data.ogImageCard || '']
+      images: [data.ogImage?.url || '']
     },
     alternates: {
       canonical: data.canonical
