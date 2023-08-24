@@ -38,6 +38,7 @@ export type Meta = {
   ogDescription?: string
   ogImage?: MicroCMSImage
   canonical?: string
+  ogImageCard: string
 }
 
 export const ogImageinnerText = 'Next.jsで構築しました!'

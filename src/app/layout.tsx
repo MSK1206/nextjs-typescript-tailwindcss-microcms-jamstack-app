@@ -9,7 +9,6 @@ import Footer from '@/app/_components/Footer'
 import { getMeta, ogImageinnerText } from '@/app/_libs/microcms'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const textData = ogImageinnerText
   const data = await getMeta()
   if (!data) {
     return {}
@@ -22,10 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: data.ogTitle,
       description: data.ogDescription,
-      images: [
-        `${data.ogImage?.url}?txt=${textData}&txt-size=55&txt-align=middle,center` ||
-          ''
-      ]
+      images: [data.ogImageCard || '']
     },
     alternates: {
       canonical: data.canonical
