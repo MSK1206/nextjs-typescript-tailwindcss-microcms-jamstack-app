@@ -13,7 +13,7 @@ type MenuItem = {
 const menuItems: MenuItem[] = [
   { label: 'Home', link: '/' },
   { label: 'Blog', link: '/blog' },
-  { label: 'Portfolio', link: '/portfolio' },
+  { label: 'Profile', link: '/profile' },
   { label: 'Contact', link: '/contact' }
 ]
 
