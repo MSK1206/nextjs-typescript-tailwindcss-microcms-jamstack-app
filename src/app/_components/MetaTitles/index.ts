@@ -9,8 +9,8 @@ export const MetaRootPageTitle = 'Home'
 // Dynamic Page (blog/page.tsx) title
 export const MetaDynamicTitle = 'Blog'
 
-// Contact Page title
-export const MetaPortFolioTitle = 'PortFolio'
+// Profile Page title
+export const MetaProfileTitle = 'Profile'
 
 // Contact Page title
 export const MetaContactTitle = 'Contact'
