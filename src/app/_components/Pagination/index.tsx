@@ -20,11 +20,14 @@ export default function Pagination({
   return (
     <ul className="flex items-center justify-center text-2xl">
       {pages.map((p) => (
-        <li key={p}>
+        <li
+          key={p}
+          className="border border-solid pt-1 pb-1 pr-2 pl-2 first:rounded-l last:rounded-r"
+        >
           {current !== p ? (
             <Link href={`${basePath}/p/${p}` + (q ? `?q=${q}` : '')}>{p}</Link>
           ) : (
-            <span>{p}</span>
+            <span className="text-blue-700">{p}</span>
           )}
         </li>
       ))}
