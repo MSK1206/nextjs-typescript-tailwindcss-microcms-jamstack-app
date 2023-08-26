@@ -1,4 +1,33 @@
 import Image from 'next/image'
+import { Metadata } from 'next';
+import { getMeta } from '@/app/_libs/microcms'
+import { MetaTitleTemplate as TitleTemplate } from '@/app/_components/MetaTitles'
+
+export const revalidate = 60;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const data = await getMeta()
+  if (!data) {
+    return {}
+  }
+
+  return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
+    title: data.titleTemplate,
+    description: data.description,
+    openGraph: {
+      type: 'website',
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+      title: data.ogTitle,
+      description: data.ogDescription,
+      siteName: data.titleTemplate,
+      images: [data?.ogImage?.url || '']
+    },
+    twitter: {
+    card: 'summary_large_image'
+    }  
+  }
+}
 
 export default function Home() {
   return (
