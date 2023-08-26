@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <section className="text-white flex items-center justify-center overflow-hidden">
-        <div className="mt-[40px]">
+        <div className="mt-[40px] z-[3]">
           <h1 className="text-3xl font-bold"></h1>
           <p className=""></p>
         </div>
