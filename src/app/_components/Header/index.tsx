@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Brand from '@/app/_components/Brand'
-import Menu from '@/app/_components/Menu'
+import SyncMenu from '@/app/_components/SyncMenu'
 
 export default function Header() {
   return (
@@ -11,7 +11,7 @@ export default function Header() {
         </Link>
       </div>
       <div className="navbar-end">
-        <Menu />
+        <SyncMenu />
       </div>
     </header>
   )
