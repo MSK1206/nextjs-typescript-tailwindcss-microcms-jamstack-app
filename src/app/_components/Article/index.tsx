@@ -14,7 +14,7 @@ export default function Article({ data }: Props) {
     <main id="top">
       <h1
         className={cx(
-          'text-center font-bold text-[20px] max-md:text-[32px]',
+          'text-center font-bold text-[20px] max-sm:text-[32px]',
           {}
         )}
       >
