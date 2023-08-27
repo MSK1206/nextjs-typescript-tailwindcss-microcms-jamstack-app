@@ -12,7 +12,7 @@ export default function Category({ category }: Props) {
           className="inline-flex items-center justify-between"
           key={category.id}
         >
-          <span className="pt-1 pb-1 pr-3 pl-3">{category.name}</span>
+          <span className="pr-1 pl-1">{category.name}</span>
         </li>
       ))}
     </>
