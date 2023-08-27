@@ -67,7 +67,7 @@ export default function Menu() {
         className={cx('hidden max-sm:block max-sm:pr-3')}
         onClick={openMenu}
       >
-        <Bars3BottomRightIcon className="w-8 h-8 text-black" />
+        <Bars3BottomRightIcon className="w-8 h-8 text-white" />
       </button>
     </div>
   )
