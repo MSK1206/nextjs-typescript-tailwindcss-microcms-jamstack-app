@@ -45,7 +45,7 @@ export default function Home() {
         <Image
           className="absolute top-0 right-0 h-[300px] bg-cover flex items-center justify-center z-[-3]"
           src="/hero.jpg"
-          alt=""
+          alt="MV"
           width={3600}
           height={1200}
           priority
