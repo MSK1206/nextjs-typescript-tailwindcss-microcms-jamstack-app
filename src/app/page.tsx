@@ -48,7 +48,7 @@ export default function Home() {
           alt="MV"
           width={3600}
           height={1200}
-          priority
+          priority={true}
         />
       </section>
       <section className="mt-[170px] p-[200px] max-sm:p-[40px] max-sm:mt-[50px]">
