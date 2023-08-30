@@ -14,7 +14,7 @@ export default function BlogListItem({ blogs }: Props) {
   const utcDate = new Date().toUTCString()
   return (
     <li className="border-solid border-b border-b-gray-300 last:border-b-[0]">
-      <Link href={`/blog/${blogs.id}`} className={styles.bloglist}>
+      <Link href={`/blog/${blogs.id}`} className={styles.bloglist} as="style">
         {blogs?.thumbnail ? (
           <Image
             src={blogs.thumbnail?.url}
