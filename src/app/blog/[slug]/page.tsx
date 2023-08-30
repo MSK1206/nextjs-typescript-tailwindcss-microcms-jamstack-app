@@ -36,6 +36,9 @@ export async function generateMetadata({
       description: data.description,
       siteName: `${TitleTemplate}`,
       images: [data?.thumbnail?.url || '']
+    },
+    twitter: {
+      card: 'summary_large_image'
     }
   }
 }
