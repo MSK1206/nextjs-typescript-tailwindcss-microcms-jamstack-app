@@ -16,10 +16,10 @@ export default function Hero({ title, sub }: Props) {
       <Image
         className={styles.bgimg}
         src="/hero.jpg"
-        alt=""
+        alt="MV"
         width={4000}
         height={1200}
-        priority
+        priority={true}
       />
     </section>
   )
