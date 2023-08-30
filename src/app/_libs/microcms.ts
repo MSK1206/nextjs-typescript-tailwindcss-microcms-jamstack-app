@@ -68,6 +68,7 @@ export const getBlogList = async (queries?: MicroCMSQueries) => {
       queries
     })
     .catch(notFound)
+  await new Promise((resolve) => setTimeout(resolve, 5000))
   return listData
 }
 
@@ -83,6 +84,7 @@ export const getBlogDetail = async (
       queries
     })
     .catch(notFound)
+  await new Promise((resolve) => setTimeout(resolve, 5000))
   return detailData
 }
 
