@@ -10,7 +10,7 @@ export default function Brand() {
         className="h-10 w-auto mr-2 sm:hidden"
         width={40}
         height={40}
-        priority
+        priority={true}
       />
       <span className="text-lg max-[768px]:hidden">{BlandName}</span>
     </div>
