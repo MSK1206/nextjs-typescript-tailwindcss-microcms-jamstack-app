@@ -12,12 +12,10 @@ type Props = {
 export default function Article({ data }: Props) {
   return (
     <main id="top">
-      <h1 className={'text-center font-bold text-[20px]'}>
-        {data.title}
-      </h1>
+      <h1 className={'text-center font-bold text-[20px]'}>{data.title}</h1>
       <p className={cx('text-center mt-1', {})}>{data.description}</p>
       <br />
-　　　　<br />
+      <br />
       <div className={cx('', {})}>
         <Category category={data.category} />
       </div>
