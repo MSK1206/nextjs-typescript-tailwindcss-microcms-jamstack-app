@@ -4,6 +4,8 @@ import {
   MetaTitleTemplate as TitleTemplate,
   MetaProfileTitle as Title
 } from '@/app/_components/MetaTitles'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 export const metadata = {
   title: `${Title} | ${TitleTemplate}`
@@ -17,7 +19,9 @@ export default function RootLayout({ children }: Props) {
   return (
     <>
       <Hero title={'Profile'} sub={'プロフィール'} />
-      <Sheet>{children}</Sheet>
+      <Sheet>
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+      </Sheet>
     </>
   )
 }
