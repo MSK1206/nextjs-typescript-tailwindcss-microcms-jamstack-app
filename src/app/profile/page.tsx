@@ -1,15 +1,11 @@
 import Image from 'next/image'
+import TableContents from '../_components/TableContents'
 
 export default function Page() {
   return (
     <section className="min-h-screen w-[50%] max-lg:w-[90%]">
       <div>
-        <dl>
-          <dt className="text-2xl pt-2 pb-2">About Me</dt>
-          <dd className="pt-2 pb-2 w-[100%]">
-            <hr />
-          </dd>
-        </dl>
+        <TableContents tablContentsTtitle={'About Me'} />
         <dl className="flex flex-wrap">
           <dt className="pt-5 pb-5">
             <Image
@@ -29,6 +25,7 @@ export default function Page() {
         <p>
           2021年に大阪でフロントエンドエンジニアとしてのキャリアがスタートしました。主にWebサイト制作の業務に携わりました。新しいテクノロジーやトレンドを追い求め、これまでの経験を通じて得た知識とスキルを活かして更なる成長と貢献を目指しています。
         </p>
+        <TableContents tablContentsTtitle={'Skills'} />
       </div>
     </section>
   )
