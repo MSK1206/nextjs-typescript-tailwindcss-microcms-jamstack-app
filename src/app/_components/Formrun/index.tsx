@@ -8,6 +8,7 @@ export default function Formrun() {
     const head = document.getElementsByTagName('head')[0] as HTMLElement
     const scriptUrl = document.createElement('script')
     scriptUrl.src = 'https://sdk.form.run/js/v2/embed.js'
+    scriptUrl.async = true // 非同期読み込みを有効
     head.appendChild(scriptUrl)
     return () => {
       // コンポーネントがアンマウントされる際にHeadからスクリプトのクリーンアップを行う
