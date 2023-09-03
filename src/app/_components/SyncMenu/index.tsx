@@ -51,6 +51,7 @@ export default function Menu() {
         <button
           name="button"
           type="button"
+          aria-label="close button"
           className={cx('hidden', {
             'max-sm:flex max-sm:bg-none max-sm:border-none max-sm:cursor-pointer max-sm:absolute max-sm:top-4 max-sm:right-4':
               isOpen
@@ -64,6 +65,7 @@ export default function Menu() {
       <button
         name="button"
         type="button"
+        aria-label="menu button"
         className={cx('hidden max-sm:block')}
         onClick={openMenu}
       >
