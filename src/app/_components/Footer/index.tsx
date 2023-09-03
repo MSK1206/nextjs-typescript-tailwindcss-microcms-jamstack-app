@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <>
       <footer className="footer footer-center p-10 bg-black text-base-content">
-        <div className="grid grid-flow-col gap-4" aria-hidden={true}>
+        <div className="grid grid-flow-col gap-4">
           <SyncActiveLink href={'/'} linkLabel={'Home'} />
           <SyncActiveLink href={'/blog'} linkLabel={'Blog'} />
           <SyncActiveLink href={'/profile'} linkLabel={'Profile'} />
