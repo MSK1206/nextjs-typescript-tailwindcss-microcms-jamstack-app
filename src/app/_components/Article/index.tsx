@@ -11,7 +11,7 @@ type Props = {
 
 export default function Article({ data }: Props) {
   return (
-    <main id="top">
+    <main id="top" role="main">
       <h1 className={'text-center font-bold text-[20px]'}>{data.title}</h1>
       <p className={cx('text-center mt-1', {})}>{data.description}</p>
       <br />
@@ -27,9 +27,12 @@ export default function Article({ data }: Props) {
           className={cx('pt-2 pb-2', {})}
           width={data.thumbnail?.width}
           height={data.thumbnail?.height}
+          role="img"
         />
       )}
-      <div className={cx('', {})}>{parse(data.content)}</div>
+      <div className={cx('', {})} role="article">
+        {parse(data.content)}
+      </div>
     </main>
   )
 }
