@@ -8,7 +8,8 @@ import { Suspense } from 'react'
 import Loading from './loading'
 
 export const metadata = {
-  title: `${Title} | ${TitleTemplate}`
+  title: `${Title} | ${TitleTemplate}`,
+  description: 'MSK1206のProfileページ'
 }
 
 type Props = {
