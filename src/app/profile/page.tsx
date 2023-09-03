@@ -14,7 +14,7 @@ export default function Page() {
               alt={'mylogo'}
               width={70}
               height={70}
-              priority={true}
+              priority
             />
           </dt>
           <dd className="flex-col justify-center items-center p-5">
@@ -27,12 +27,86 @@ export default function Page() {
           2021年に大阪でフロントエンドエンジニアとしてのキャリアがスタートしました。主にWebサイト制作の業務に携わりました。新しいテクノロジーやトレンドを追い求め、これまでの経験を通じて得た知識とスキルを活かして更なる成長と貢献を目指しています。
         </p>
         <TableContents tablContentsTtitle={'Skills'} />
-        <div className="">
-          <Rating rating={1} />
-          <Rating rating={2} />
-          <Rating rating={3} />
-          <Rating rating={4} />
-          <Rating rating={5} />
+        <br />
+        <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-4">
+          <div className="inline-flex items-center justify-center border border-gray-300 rounded">
+            <Image
+              src={'/HTML5.svg'}
+              alt={'HTML5'}
+              width={60}
+              height={60}
+              priority
+            />
+            <div className="p-1">
+              <h2 className="font-bold sm:pr-2">HTML</h2>
+              <Rating rating={5} />
+            </div>
+          </div>
+          <div className="inline-flex items-center justify-center border border-gray-300 rounded">
+            <Image
+              src={'/CSS3.svg'}
+              alt={'CSS3'}
+              width={60}
+              height={60}
+              priority
+            />
+            <div className="p-1">
+              <h2 className="font-bold sm:pr-2">CSS</h2>
+              <Rating rating={5} />
+            </div>
+          </div>
+          <div className="inline-flex items-center justify-center border border-gray-300 rounded">
+            <Image
+              src={'/JavaScript.svg'}
+              alt={'JavaScript'}
+              width={60}
+              height={60}
+              priority
+            />
+            <div className="p-1">
+              <h2 className="font-bold sm:pr-2">JavaScript</h2>
+              <Rating rating={4} />
+            </div>
+          </div>
+          <div className="inline-flex items-center justify-center border border-gray-300 rounded">
+            <Image
+              src={'/TypeScript.svg'}
+              alt={'TypeScript'}
+              width={60}
+              height={60}
+              priority
+            />
+            <div className="p-1">
+              <h2 className="font-bold sm:pr-2">TypeScript</h2>
+              <Rating rating={4} />
+            </div>
+          </div>
+          <div className="inline-flex items-center justify-center border border-gray-300 rounded">
+            <Image
+              src={'/Nextjs.svg'}
+              alt={'Next.js'}
+              width={60}
+              height={60}
+              priority
+            />
+            <div className="p-1">
+              <h2 className="font-bold sm:pr-2">Next.js</h2>
+              <Rating rating={5} />
+            </div>
+          </div>
+          <div className="inline-flex items-center justify-center border border-gray-300 rounded">
+            <Image
+              src={'/Python.svg'}
+              alt={'Python'}
+              width={60}
+              height={60}
+              priority
+            />
+            <div className="p-1">
+              <h2 className="font-bold sm:pr-2">Python</h2>
+              <Rating rating={3} />
+            </div>
+          </div>
         </div>
       </div>
     </section>
