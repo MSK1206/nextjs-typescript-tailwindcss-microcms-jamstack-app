@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import TableContents from '../_components/TableContents'
+import Rating from '../_components/Rating'
 
 export default function Page() {
   return (
@@ -26,6 +27,13 @@ export default function Page() {
           2021年に大阪でフロントエンドエンジニアとしてのキャリアがスタートしました。主にWebサイト制作の業務に携わりました。新しいテクノロジーやトレンドを追い求め、これまでの経験を通じて得た知識とスキルを活かして更なる成長と貢献を目指しています。
         </p>
         <TableContents tablContentsTtitle={'Skills'} />
+        <div className="">
+          <Rating rating={1} />
+          <Rating rating={2} />
+          <Rating rating={3} />
+          <Rating rating={4} />
+          <Rating rating={5} />
+        </div>
       </div>
     </section>
   )
