@@ -9,7 +9,7 @@
 
 ## 主な機能
 
-- Next.jsによるServer ComponentsでのDataのfetch
+- Next.jsによるReact Server ComponentsでのDataのfetch
 - TypeScriptによる型安全なコーディング
 - Tailwind CSSによる迅速なスタイリング
 - microCMSを活用したコンテンツ管理
