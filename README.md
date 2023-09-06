@@ -1,7 +1,7 @@
 
 ### nextjs-typescript-tailwindcss- microcms-jamstack-app
 
-このプロジェクトは、Next.js AppRouterを採用しています。
+このプロジェクトは、Next.js AppRouterを採用しています。現在作成中
 
 ## 概要
 
