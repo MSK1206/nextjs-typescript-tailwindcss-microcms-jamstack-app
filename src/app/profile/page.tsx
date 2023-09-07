@@ -107,6 +107,32 @@ export default function Page() {
               <Rating rating={3} />
             </div>
           </div>
+          <div className="inline-flex items-center justify-center border border-gray-300 rounded">
+            <Image
+              src={'/Angular.svg'}
+              alt={'Angular'}
+              width={60}
+              height={60}
+              priority
+            />
+            <div className="p-1">
+              <h2 className="font-bold sm:pr-2">Angular</h2>
+              <Rating rating={3} />
+            </div>
+          </div>
+          <div className="inline-flex items-center justify-center border border-gray-300 rounded">
+            <Image
+              src={'/Rails.svg'}
+              alt={'Rails'}
+              width={60}
+              height={60}
+              priority
+            />
+            <div className="p-1">
+              <h2 className="font-bold sm:pr-2">Rails</h2>
+              <Rating rating={3} />
+            </div>
+          </div>
         </div>
       </div>
     </section>
