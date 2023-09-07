@@ -1,7 +1,7 @@
 
 ### nextjs-typescript-tailwindcss- microcms-jamstack-app
 
-このプロジェクトは、Next.js AppRouterを採用しています。
+このプロジェクトは、Next.js AppRouterを採用しています。現在作成中
 
 ## 概要
 
@@ -9,7 +9,7 @@
 
 ## 主な機能
 
-- Next.jsによるServer ComponentsでのDataのfetch
+- Next.jsによるReact Server ComponentsでのDataのfetch
 - TypeScriptによる型安全なコーディング
 - Tailwind CSSによる迅速なスタイリング
 - microCMSを活用したコンテンツ管理
