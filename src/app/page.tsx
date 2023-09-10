@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 import { getMeta } from '@/app/_libs/microcms'
 import { MetaRootPageTitle as Title } from '@/app/_components/MetaTitles'
+import Link from 'next/link'
 
 export const revalidate = 60
 
@@ -51,10 +52,21 @@ export default function Home() {
           priority={true}
         />
       </section>
-      <section className="mt-[170px] p-[200px] max-sm:p-[40px] max-sm:mt-[50px]">
-        <div className="mt-[40px]">
-          <h2></h2>
-          <p></p>
+      <section className="relative bg-white w-[840px] mt-[140px] mr-[auto] ml-[auto] mb-0 p-20 rounded-[20px]">
+        <div className="min-h-full">
+          <Link href="https://zenn.dev/msk1206">
+            <div className="inline-flex flex-col items-center justify-around pt-[45px] pb-[45px] pr-[45px] pl-[45px] border border-gray-300 rounded bg-black">
+              <Image
+                src={'/logo-only-white.svg'}
+                alt={'Zenn tech blog'}
+                className="p-3"
+                width={60}
+                height={60}
+                priority
+              />
+              <span className="text-white font-bold sm:pr-2">Zenn Blog</span>
+            </div>
+          </Link>
         </div>
       </section>
     </>
