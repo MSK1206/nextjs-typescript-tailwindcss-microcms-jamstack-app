@@ -14,6 +14,7 @@
 - TypeScriptによる型安全なコーディング
 - Tailwind CSSによる迅速なスタイリング
 - microCMSを活用したコンテンツ管理
+- formrunを利用したコンタクトフォーム
 
 ## インストールと実行
 
