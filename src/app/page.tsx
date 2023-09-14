@@ -52,8 +52,8 @@ export default function Home() {
           priority={true}
         />
       </section>
-      <section className="relative bg-white w-[840px] mt-[140px] mr-[auto] ml-[auto] mb-0 pt-20 pb-20 pl-4 pr-4 rounded-[20px] max-md:mt-[140px] max-md:w-[calc(100%-32px)]">
-        <div className="min-h-full">
+      <section className="relative min-h-full bg-white w-[840px] mt-[140px] mr-[auto] ml-[auto] mb-0 pt-20 pb-20 pl-4 pr-4 rounded-[20px] max-md:mt-[140px] max-md:w-[calc(100%-32px)] max-[1366px]:w-[calc(100%-80px)]">
+        <div className="">
           <Link href="https://zenn.dev/msk1206" target="_blank">
             <div className="inline-flex flex-col items-center justify-around p-[45px] border border-gray-300 rounded bg-black max-md:pt-[25px] max-md:pb-[25px] max-md:pr-[30px] max-md:pl-[30px]">
               <Image
