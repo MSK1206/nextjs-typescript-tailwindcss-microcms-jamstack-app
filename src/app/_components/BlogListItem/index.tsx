@@ -38,7 +38,7 @@ export default function BlogListItem({ blogs }: Props) {
           <dt className="text-[1rem] font-bold">{blogs.title}</dt>
           <dd className="flex items-center gap-4">
             <InfoTag infotag={blogs.infotag} />
-            <PublishedDate date={utcDate} />
+            <PublishedDate date={blogs.publishedAt || blogs.createdAt} />
           </dd>
         </dl>
       </Link>
