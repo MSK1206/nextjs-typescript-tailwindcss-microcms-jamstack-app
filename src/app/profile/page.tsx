@@ -18,13 +18,13 @@ export default function Page() {
             />
           </dt>
           <dd className="flex-col justify-center items-center p-5">
-            <h1 className="text-xl">MSK1206</h1>
+            <h1 className="text-xl font-bold">MSK1206</h1>
             <p className="text-[12px]">birth: 1989</p>
             <span className="text-[12px]">フロントエンドエンジニア</span>
           </dd>
         </dl>
-        <p>
-          2021年に大阪でフロントエンドエンジニアとしてのキャリアがスタートしました。主にWebサイト制作の業務に携わりました。新しいテクノロジーやトレンドを追い求め、これまでの経験を通じて得た知識とスキルを活かして更なる成長と貢献を目指しています。
+        <p className="break-keep max-[796px]:break-normal">
+          2021年から大阪でフロントエンドエンジニアとしてのキャリアがスタートしました。主にWebサイト制作に携っておりフロントエンドを最も得意とします。新しいテクノロジーやトレンドを追い求め、これまでの経験を通じて得た知識とスキルを活かして更なる成長と貢献を目指しています。
         </p>
         <TableContents tablContentsTtitle={'Skills'} />
         <br />
