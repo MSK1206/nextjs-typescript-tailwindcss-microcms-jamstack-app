@@ -16,6 +16,7 @@ export default async function Page() {
   return (
     <div className="p-4">
       <BlogList articles={data.contents} />
+      <br />
       <Pagination totalCount={data.totalCount} basePath="/blog" />
     </div>
   )
