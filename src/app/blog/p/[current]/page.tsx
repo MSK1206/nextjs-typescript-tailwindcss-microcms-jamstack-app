@@ -25,6 +25,7 @@ export default async function Page({ params }: Props) {
   return (
     <div className="p-4">
       <BlogList articles={data.contents} />
+      <br />
       <Pagination
         totalCount={data.totalCount}
         current={current}
