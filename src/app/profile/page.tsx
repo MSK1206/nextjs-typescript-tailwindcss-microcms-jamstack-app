@@ -23,7 +23,7 @@ export default function Page() {
             <span className="text-[12px]">フロントエンドエンジニア</span>
           </dd>
         </dl>
-        <p className="break-all">
+        <p className="break-word">
           2021年から大阪でフロントエンドエンジニアとしてのキャリアがスタートしました。主にWebサイト制作に携っておりフロントエンドを最も得意とします。新しいテクノロジーやトレンドを追い求め、これまでの経験を通じて得た知識とスキルを活かして更なる成長と貢献を目指しています。
         </p>
         <TableContents tablContentsTtitle={'Skills'} />
