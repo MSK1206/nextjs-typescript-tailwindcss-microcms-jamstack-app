@@ -35,7 +35,10 @@ export async function generateMetadata({
       title: data.title,
       description: data.description,
       siteName: `${TitleTemplate}`,
-      images: [data?.thumbnail?.url || '']
+      images: [
+        `${data?.thumbnail?.url}?txt=${data.title}&txt-size=45&txt-align=middle,center&txt-shad=5` ||
+          ''
+      ]
     },
     twitter: {
       card: 'summary_large_image'
