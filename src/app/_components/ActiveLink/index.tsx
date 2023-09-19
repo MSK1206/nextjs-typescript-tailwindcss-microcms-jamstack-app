@@ -21,7 +21,7 @@ export default function ActiveLink({
 
   const linkStyle = classNames(
     // 共通のスタイル
-    'cursor-pointer p-2 max-sm:mt-5 max-sm:first:mt-0 max-sm:last:pr-4',
+    'cursor-pointer text-center p-2 w-[80px] max-sm:mt-5 max-sm:first:mt-0 max-sm:last:pr-4 max-[796px]:text-start',
     {
       // isActive = trueの場合のスタイル
       'text-gray-500': isActive,
@@ -33,10 +33,8 @@ export default function ActiveLink({
     closeMenu?.() // メニューを閉じる
   }
   return (
-    <Link href={href}>
-      <li className={linkStyle} onClick={handleClick}>
-        {linkLabel}
-      </li>
+    <Link href={href} onClick={handleClick}>
+      <li className={linkStyle}>{linkLabel}</li>
     </Link>
   )
 }
