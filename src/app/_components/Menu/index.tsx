@@ -29,7 +29,7 @@ export default function Menu() {
         })}
       >
         <ul
-          className={cx('flex gap-10', {
+          className={cx('flex gap-5', {
             'max-sm:flex-col max-sm:pt-0 max-sm:pr-20 max-sm:pb-0 max-sm:pl-5 max-sm:gap-6':
               isOpen
           })}
