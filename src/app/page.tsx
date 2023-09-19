@@ -55,16 +55,18 @@ export default function Home() {
       <section className="relative min-h-full bg-white w-[840px] mt-[140px] mr-[auto] ml-[auto] mb-0 p-20 rounded-[20px] max-md:mt-[140px] max-md:w-[calc(100%-32px)] max-[1366px]:w-[calc(100%-80px)]">
         <div className="">
           <Link href="https://zenn.dev/msk1206" target="_blank">
-            <div className="inline-flex flex-col items-center justify-around p-[45px] border border-gray-300 rounded bg-black max-md:pt-[25px] max-md:pb-[25px] max-md:pr-[30px] max-md:pl-[30px]">
+            <div className="inline-flex flex-col items-center justify-around p-[45px] border border-gray-300 rounded bg-black max-md:pt-[10px] max-md:pb-[10px] max-md:pr-[15px] max-md:pl-[15px]">
               <Image
                 src={'/logo-only-white.svg'}
                 alt={'Zenn tech blog'}
-                className="p-3"
+                className="p-3 max-md:w-10 max-md:h-10"
                 width={60}
                 height={60}
                 priority
               />
-              <span className="text-white font-bold sm:pr-2">Zenn Blog</span>
+              <span className="text-white font-bold sm:pr-2 max-md:text-[11px]">
+                Zenn Blog
+              </span>
             </div>
           </Link>
         </div>
