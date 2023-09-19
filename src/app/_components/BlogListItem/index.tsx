@@ -17,7 +17,10 @@ export default function BlogListItem({ blogs }: Props) {
       <Link href={`/blog/${blogs.id}`} className={styles.bloglist}>
         {blogs?.thumbnail ? (
           <Image
-            src={blogs.thumbnail?.url}
+            src={
+              `${blogs?.thumbnail?.url}?txt=${blogs.title}&txt-size=45&txt-align=middle,center&txt-shad=5` ||
+              ''
+            }
             alt={blogs.title}
             className={`w-[200px] h-auto rounded max-sm:hidden ${styles.image}`}
             width={blogs.thumbnail?.width}
