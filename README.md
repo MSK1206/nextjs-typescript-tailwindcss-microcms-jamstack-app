@@ -16,20 +16,6 @@
 - microCMSを活用したコンテンツ管理
 - formrunを利用したコンタクトフォーム
 
-## インストールと実行
-
-1. 必要なnpmパッケージをインストールします。
-
-```bash
-npm install
-```
-
-2. 開発サーバーを起動します。
-
-```bash
-npm run dev
-```
-
 ## リンク
 
 - [Next.js 公式サイト](https://nextjs.org/)
