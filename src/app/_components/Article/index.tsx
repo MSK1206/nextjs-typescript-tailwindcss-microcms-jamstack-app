@@ -19,14 +19,11 @@ export default function Article({ data }: Props) {
         {data.title}
       </h1>
       <p className="text-center mt-2">{data.description}</p>
-      <br />
-      <br />
-
       {data.thumbnail && (
         <Image
           src={`${data.thumbnail?.url}?txt=${data.title}&txt-size=45&txt-align=middle,center&txt-shad=5`}
           alt={data.title}
-          className={'pt-2 pb-2'}
+          className={'pt-2 pb-2 mt-2 mb-2'}
           width={data.thumbnail?.width}
           height={data.thumbnail?.height}
           role="img"
