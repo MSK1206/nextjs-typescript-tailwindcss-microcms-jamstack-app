@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { type Blogs } from '@/app/_libs/microcms'
 import PublishedDate from '@/app/_components/Date'
-import parse from 'html-react-parser'
 import Category from '@/app/_components/Categories'
+import { formatHighLight } from '@/app/_libs/highLight'
 
 type Props = {
   data: Blogs
@@ -32,9 +32,13 @@ export default function Article({ data }: Props) {
           role="img"
         />
       )}
-      <div className="" role="article">
-        {parse(data.content)}
-      </div>
+      <div
+        className="article"
+        role="article"
+        dangerouslySetInnerHTML={{
+          __html: `${formatHighLight(data.content)}`
+        }}
+      />
     </main>
   )
 }
