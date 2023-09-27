@@ -19,7 +19,7 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <>
-      <Hero title={'Category'} sub={'カテゴリ'} />
+      <Hero title={'Category'} sub={'カテゴリー'} />
       <Sheet>
         <Suspense fallback={<Loading />}>{children}</Suspense>
       </Sheet>
