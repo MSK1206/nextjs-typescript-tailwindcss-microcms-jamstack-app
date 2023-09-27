@@ -3,6 +3,7 @@ import { type Blogs } from '@/app/_libs/microcms'
 import PublishedDate from '@/app/_components/Date'
 import Category from '@/app/_components/Categories'
 import { formatHighLight } from '@/app/_libs/highLight'
+import CategoryTest from '../CategoryTest'
 
 type Props = {
   data: Blogs
@@ -12,7 +13,7 @@ export default function Article({ data }: Props) {
   return (
     <main id="top" role="main">
       <div className="">
-        <Category category={data.category} />
+        <CategoryTest category={data.category} />
       </div>
       <PublishedDate date={data.publishedAt || data.createdAt} />
       <h1 className="mt-6 text-center font-bold text-[20px] max-[796px]:text-[calc(100%+5px)] max-[844px]:text-[calc(100%+10px)] max-[896px]:text-[calc(100%+15px)] max-[1366px]:text-[calc(100%+25px)]">
