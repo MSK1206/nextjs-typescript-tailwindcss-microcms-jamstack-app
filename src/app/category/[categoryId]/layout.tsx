@@ -25,7 +25,7 @@ export default async function RootLayout({ children, params }: Props) {
   const Category = await getCategoryDetail(categoryId)
   return (
     <>
-      <Hero title={`${Category.name}の記事一覧`} sub={'カテゴリー'} />
+      <Hero title={'Category'} sub={`${Category.name}の記事一覧`} />
       <Sheet>
         <Suspense fallback={<Loading />}>{children}</Suspense>
       </Sheet>
