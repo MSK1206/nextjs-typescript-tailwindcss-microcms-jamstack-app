@@ -6,6 +6,7 @@ import {
 } from '@/app/_components/MetaTitles'
 import { Suspense } from 'react'
 import Loading from './loading'
+import { getCategoryDetail } from '@/app/_libs/microcms'
 
 export const metadata = {
   title: `${Title} - ${TitleTemplate}`,
@@ -14,12 +15,17 @@ export const metadata = {
 
 type Props = {
   children: React.ReactNode
+  params: {
+    categoryId: string
+  }
 }
 
-export default function RootLayout({ children }: Props) {
+export default async function RootLayout({ children, params }: Props) {
+  const { categoryId } = params
+  const Category = await getCategoryDetail(categoryId)
   return (
     <>
-      <Hero title={'Category'} sub={'カテゴリー'} />
+      <Hero title={`${Category.name}の記事一覧`} sub={'カテゴリー'} />
       <Sheet>
         <Suspense fallback={<Loading />}>{children}</Suspense>
       </Sheet>
